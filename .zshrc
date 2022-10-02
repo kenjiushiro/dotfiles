@@ -102,8 +102,13 @@ source $ZSH/oh-my-zsh.sh
 EDITOR=nvim
 alias n=nvim
 alias pdb="python -m debugpy --listen 5678"
+alias pdb="python -m debugpy --listen 5678"
 alias crkbd="qmk compile -kb crkbd -km penji"
-alias planck="qmk compile -kb rev6/planck -km penji"
+alias planck="qmk compile -kb planck/rev6 -km penji"
+alias fcrkbd="qmk flash -kb crkbd -km penji"
+alias fplanck="qmk flash -kb planck/rev6 -km penji"
+alias venv="source venv/bin/activate"
+PATH="$HOME/.local/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
