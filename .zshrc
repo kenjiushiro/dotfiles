@@ -99,7 +99,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-EDITOR=nvim
+export EDITOR=nvim
+export VISUAL=nvim
 alias n=nvim
 alias pdb="python -m debugpy --listen 5678"
 alias pdb="python -m debugpy --listen 5678"
