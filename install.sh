@@ -6,6 +6,8 @@ sudo apt install zsh
 sudo npm install -g typescript
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+git config --global core.autocrlf true
+git config --global credential.helper store
 
 cp ./.zshrc ~/.zshrc
 
