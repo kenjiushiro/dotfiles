@@ -1,12 +1,12 @@
 git config --global credential.helper store
-git config --global core.autocrlf true
-sudo apt install nodejs
-sudo apt install npm
-sudo apt install nvm
-sudo apt install python3
-sudo apt install zsh
-sudo apt install ripgrep
-sudo npm install -g typescript
+sudo apt --assume-yes update
+sudo apt --assume-yes install nodejs
+sudo apt --assume-yes install npm
+sudo apt --assume-yes install nvm
+sudo apt --assume-yes install python3
+sudo apt --assume-yes install zsh
+sudo apt --assume-yes install ripgrep
+sudo npm --assume-yes install -g typescript
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 curl -sLf https://raw.githubusercontent.com/kenjiushiro/nvim/main/utils/install.sh | sh
