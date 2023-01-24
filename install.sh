@@ -13,6 +13,7 @@ sudo apt --assume-yes install ruby
 sudo apt --assume-yes install composer
 sudo apt --assume-yes install php
 sudo apt --assume-yes install python3-pip
+sudo apt --assume-yes install python3.10-venv
 sudo npm --assume-yes install -g typescript
 sudo apt --assume-yes install fd-find
 sudo apt --assume-yes install ./nvim-linux64.deb
