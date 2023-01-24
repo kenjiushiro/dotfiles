@@ -112,6 +112,18 @@ alias fplanck="qmk flash -kb planck/rev6 -km penji"
 alias venv="source venv/bin/activate"
 PATH="$HOME/.local/bin:$PATH"
 
+nsecrets ()
+{
+  local projectSelected=$(find **/*.csproj | fzf)
+  local guid=$(cat $projectSelected | grep UserSecretsId | grep -oPm1 "(?<=<UserSecretsId>)[^<]+")
+  local secretsPath=~/.microsoft/usersecrets/$guid/secrets.json
+  if [[ -f $secretsPath ]]; then
+    nvim $secretsPath
+  else
+    echo "This project has no secrets.json file"
+  fi
+}
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

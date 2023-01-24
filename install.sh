@@ -2,6 +2,7 @@ git config --global credential.helper store
 # git config --global credential.helper "/mnt/c/path to git-credential manager/Git/mingw64/libexec/git-core/git-credential-wincred.exe"
 sudo apt --assume-yes update
 sudo apt --assume-yes install nodejs
+sudo apt --assume-yes install fzf
 sudo apt --assume-yes install npm
 sudo apt --assume-yes install python3
 sudo apt --assume-yes install zsh
