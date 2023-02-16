@@ -1,5 +1,5 @@
 git config --global credential.helper store
-# git config --global credential.helper "/mnt/c/path to git-credential manager/Git/mingw64/libexec/git-core/git-credential-wincred.exe"
+# git config --global credential.helper "/mnt/c/Users/username/AppData/Local/Programs/Git/mingw64/libexec/git-core/git-credential-wincred.exe"
 sudo apt --assume-yes update
 sudo apt --assume-yes install nodejs
 sudo apt --assume-yes install fzf
@@ -28,6 +28,6 @@ curl -sLf https://raw.githubusercontent.com/kenjiushiro/nvim/main/utils/install.
 
 ./install_neovim.sh
 ./install-tmux-plugin-manager.sh
-./install_alacritty.sh
+# ./install_alacritty.sh
 
 cp ./.zshrc ~/.zshrc
