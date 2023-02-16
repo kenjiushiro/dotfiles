@@ -117,12 +117,12 @@ nsecrets ()
 {
   local projectSelected=$(find **/*.csproj | fzf)
   local guid=$(cat $projectSelected | grep UserSecretsId | grep -oPm1 "(?<=<UserSecretsId>)[^<]+")
-  local secretsJson=~/.microsoft/usersecrets/$guid/secrets.jsons
+  local secretsPath=~/.microsoft/usersecrets/$guid/secrets.jsons
   if [[ -z $guid ]]; then
     echo "This project has no user secrets"
     return
   fi
-  nvim $secretsJson
+  nvim $secretsPath
 }
 
 dnr ()
