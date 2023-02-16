@@ -110,17 +110,28 @@ alias planck="qmk compile -kb planck/rev6 -km penji"
 alias fcrkbd="qmk flash -kb crkbd -km penji"
 alias fplanck="qmk flash -kb planck/rev6 -km penji"
 alias venv="source venv/bin/activate"
+alias wslvpn="wsl.exe -d wsl-vpnkit --cd /app service wsl-vpnkit start"
 PATH="$HOME/.local/bin:$PATH"
 
 nsecrets ()
 {
   local projectSelected=$(find **/*.csproj | fzf)
   local guid=$(cat $projectSelected | grep UserSecretsId | grep -oPm1 "(?<=<UserSecretsId>)[^<]+")
-  local secretsPath=~/.microsoft/usersecrets/$guid/secrets.json
-  if [[ -f $secretsPath ]]; then
-    nvim $secretsPath
-  else
-    echo "This project has no secrets.json file"
+  local secretsJson=~/.microsoft/usersecrets/$guid/secrets.jsons
+  if [[ -z $guid ]]; then
+    echo "This project has no user secrets"
+    return
+  fi
+  nvim $secretsJson
+}
+
+dnr ()
+{
+  local projectPath=$(find **/*.csproj | fzf)
+  local projectSelected=$(dirname $projectPath)
+
+  if [[ ! -z $projectSelected ]]; then
+    dotnet run --project $projectSelected --environment local
   fi
 }
 
