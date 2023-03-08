@@ -31,3 +31,4 @@ curl -sLf https://raw.githubusercontent.com/kenjiushiro/nvim/main/utils/install.
 # ./install_alacritty.sh
 
 cp ./.zshrc ~/.zshrc
+cp ./alias.sh ~/alias.sh
