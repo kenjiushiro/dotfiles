@@ -15,7 +15,7 @@ sudo apt --assume-yes install python3-pip
 sudo apt --assume-yes install python3.10-venv
 sudo npm --assume-yes install -g typescript
 sudo apt --assume-yes install fd-find
-sudo apt --assume-yes install ./nvim-linux64.deb
+sudo apt --assume-yes install tmux
 
 pip install neovim
 sudo npm install -g neovim
@@ -23,3 +23,10 @@ sudo npm install -g neovim
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 curl -sLf https://raw.githubusercontent.com/kenjiushiro/nvim/main/utils/install.sh | sh
+
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
+
+go install github.com/jesseduffield/lazydocker@latest
