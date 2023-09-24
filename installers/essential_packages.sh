@@ -16,9 +16,13 @@ sudo apt --assume-yes install python3.10-venv
 sudo npm --assume-yes install -g typescript
 sudo apt --assume-yes install fd-find
 sudo apt --assume-yes install tmux
+sudo apt --assume-yes install flameshot
+python3 -m pip install --break-system-packages --user qmk
 
-pip install neovim
+pip install --break-system-packages neovim
 sudo npm install -g neovim
+
+qmk setup
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash

@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 alias n=nvim
 alias pdb="python -m debugpy --listen 5678"
-alias pdb="python -m debugpy --listen 5678"
 alias crkbd="qmk compile -kb crkbd -km penji"
 alias planck="qmk compile -kb planck/rev6 -km penji"
 alias fcrkbd="qmk flash -kb crkbd -km penji"
