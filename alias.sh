@@ -10,3 +10,4 @@ alias wslvpn="wsl.exe -d wsl-vpnkit --cd /app service wsl-vpnkit start"
 alias lg="lazygit"
 alias sz="source ~/.zshrc"
 alias nz="nvim $DOTFILES_PATH"
+alias wq='wmctrl -r 'tmux' -b toggle,fullscreen'
