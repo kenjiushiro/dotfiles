@@ -17,6 +17,7 @@ sudo npm --assume-yes install -g typescript
 sudo apt --assume-yes install fd-find
 sudo apt --assume-yes install tmux
 sudo apt --assume-yes install flameshot
+sudo apt --assume-yes install curl
 python3 -m pip install --break-system-packages --user qmk
 
 pip install --break-system-packages neovim
