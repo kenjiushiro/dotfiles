@@ -9,6 +9,9 @@ source $DOTFILES_PATH/alias.sh
 source $DOTFILES_PATH/dotnet.sh
 PATH="$HOME/.local/bin:$PATH"
 
+export LD_LIBRARY_PATH=/opt/oracle/instantclient_21_4:$LD_LIBRARY_PATH
+export PATH=$LD_LIBRARY_PATH:$PATH
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
