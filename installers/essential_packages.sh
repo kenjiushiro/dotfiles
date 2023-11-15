@@ -18,6 +18,7 @@ sudo apt --assume-yes install fd-find
 sudo apt --assume-yes install tmux
 sudo apt --assume-yes install flameshot
 sudo apt --assume-yes install curl
+sudo apt --assume-yes install wmctrl
 python3 -m pip install --break-system-packages --user qmk
 
 pip install --break-system-packages neovim
