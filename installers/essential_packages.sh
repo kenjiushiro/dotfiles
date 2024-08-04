@@ -23,6 +23,7 @@ sudo pacman -S --noconfirm wmctrl
 sudo pacman -S --noconfirm neovim
 sudo pacman -S --noconfirm kitty
 sudo pacman -S --noconfirm fuse2
+sudo pacman -S --noconfirm openssh
 
 sudo pacman -S --noconfirm pulseaudio
 sudo pacman -S --noconfirm kscreen
