@@ -21,6 +21,7 @@ brew install fd
 brew install tmux
 brew install flameshot
 brew install curl
+brew install qmk/qmk/qmk
 
 # Optional: install wmctrl (not available on macOS; skip or replace with alternatives)
 # brew install wmctrl # Not supported on macOS
@@ -30,11 +31,7 @@ sudo npm install -g typescript
 sudo npm install -g neovim
 
 # Install Python packages
-python3 -m pip install --user qmk
 python3 -m pip install --user neovim
-
-# QMK setup
-qmk setup
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
